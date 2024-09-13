@@ -1,0 +1,100 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#eee;
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+
+body {
+    background-color: var(--color-background);
+	padding: 0;
+}
+
+h3{
+	font-family:sans-serif
+}
+
+p{
+	font-family: Helvetica, sans-serif;
+}
+
+main ul p:nth-last-of-type(1){
+	display: flex;
+	justify-content: end;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid;
+	padding: 1em;
+}
+
+main{
+	padding-top: 5em;
+}
+
+main ul {
+    list-style-type: none;
+	padding: 0;
+}
+
+main ul li {
+    background-color: var(--color-background);
+}
+
+li img {
+    width: 100%;
+}
+
+footer {
+	background-color: #1b1b1b;;
+}
+
+footer ul {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+		list-style-type: none;
+		padding: 0;
+
+
+}
+
+footer ul li{
+	padding: 3em;
+	background-color: black;
+	border: 1px solid #c4c5ba;
+}
+
+
