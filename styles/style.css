@@ -7,19 +7,14 @@
 
 
 
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
 	--color-text:#111;
-	--color-background:#eee;
+	--color-background:#ffffff;
 }
-
-
 
 
 
@@ -27,10 +22,160 @@
 /* JOUW STYLING */
 /****************/
 
+/******************************/
+/* DE CAROCARROUSEL CONTAINER */
+/******************************/
+
+.caroCarrousel {
+	/* basis waarden die door de hele carrousel gebruikt worden */
+	/* kun je zelf aanpassen */
+	--caroCarrouselMainColor:#333;
+  --caroCarrouselAccentColor:#0003ff;
+	--caroCarrouselShadeColor:#ddd9;
+
+  position: relative;
+	outline:none;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  .caroCarrousel {
+    --caroCarrouselMainColor:#ccc;
+    --caroCarrouselShadeColor:#4449;
+  }
+}
+
+
+/************************************/
+/* de carrousel elementen container */
+.caroCarrousel > ul {
+  margin: 0; padding: 0;
+  list-style: none;
+	display: flex;
+	
+	/* handmatig scrollen is mogelijk */
+	overflow: hidden;
+	
+	/* snappen als er gescrolled wordt - andere helft bij li */
+  scroll-snap-type: inline mandatory;
+  
+  /* smooth scrollen */
+	scroll-behavior: smooth;
+  
+  /* scrollbar zoveel mogelijk verbergen */
+  -webkit-overflow-scrolling: touch; /* voor iOS*/
+  -ms-overflow-style: none; /* voor IE */
+	scrollbar-width: none; /* voor firefox */
+}
+
+.caroCarrousel > ul::-webkit-scrollbar {
+  /* scrollbar zoveel mogelijk verbergen */
+  display: none; /* voor chrome, safari en edge*/
+}
+
+
+/**************************/
+/* de carrousel elementen */
+.caroCarrousel > ul li {
+  flex-basis: 100%;
+  flex-shrink: 0;
+  /* snappen als er gescrolled wordt - andere helft bij ul */
+	scroll-snap-align:center;
+}
+
+
+/**********************************/
+/* de carrousel elementen content */
+
+/* de stijlen voor jouw content hier */
+.caroCarrousel > ul li > img {
+  display: block;
+  width: 100%;
+}
+
+
+/****************/
+/* DE BOLLETJES */
+/****************/
+
+/* de bolletjes container */
+.caroCarrousel nav ul {
+  position: absolute;
+	left: 2em; right: 2em;
+	bottom: 0;
+	margin: 0;
+  padding: 0 0 .5em;
+  list-style: none;
+	
+	display: flex;
+/* 	flex-wrap:wrap; */
+  justify-content: center;
+  gap:.4em;
+}
+
+/* een bolletje container */
+.caroCarrousel > nav li {
+	flex-basis: 1.2em;
+	aspect-ratio: 1/1;
+	background-color: transparent; /* Verwijdert de achtergrondkleur */
+	border: none; /* Zorgt ervoor dat er geen randen zijn */
+}
+
+/* de bolletjes */
+.caroCarrousel > nav a {
+  display: block;
+  width:100%;
+  height:100%;
+  color: white;
+  text-decoration: none;
+	font-size: 3em;
+  transition: 0.5s;
+  margin-bottom: 0.3em;
+  
+}
+
+.caroCarrousel > nav a:hover,
+.caroCarrousel > nav a:focus {
+  color: var(--caroCarrouselAccentColor);
+}
+
+.caroCarrousel > nav a.current {
+  color: #0003ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 body {
     background-color: var(--color-background);
 	padding: 0;
+	margin: 0;
+	font-family:sans-serif
+}
+
+header nav ul{
+	background-color: rgba(255, 255, 255, 0);
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+	padding: 1em;
 }
 
 h3{
@@ -46,17 +191,6 @@ main ul p:nth-last-of-type(1){
 	justify-content: end;
 }
 
-nav ul {
-	display: flex;
-	justify-content: space-between;
-	list-style-type: none;
-    position: fixed;
-    top: 0;
-    background-color: #fff;
-    width: 100%;
-    border-bottom: 1px solid;
-	padding: 1em;
-}
 
 main{
 	padding-top: 5em;
@@ -64,7 +198,7 @@ main{
 
 main ul {
     list-style-type: none;
-	padding: 0;
+	padding: 32px 16px;
 }
 
 main ul li {
@@ -72,8 +206,13 @@ main ul li {
 }
 
 li img {
+	display: block;
     width: 100%;
 }
+
+/****************/
+/* FOOTER STYLING */
+/****************/
 
 footer {
 	background-color: #1b1b1b;;
@@ -96,5 +235,3 @@ footer ul li{
 	background-color: black;
 	border: 1px solid #c4c5ba;
 }
-
-
