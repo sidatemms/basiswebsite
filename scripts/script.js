@@ -110,3 +110,5 @@ function createCaroCarrousel(carrouselID) {
   //je kunt hier ook meerdere carrousellen activeren
 })();
   
+
+

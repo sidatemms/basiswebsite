@@ -12,12 +12,41 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#ffffff;
+	--nav-background: white;
+	--color-text: black;
+	--color-kopjes: black;
+	--body-background: white;
+	--pijl-active: #0003ff;
+	--pijl-nietactive: white;
+	--footer-background: rgb(36, 36, 36);
+	--footer-text: white;
+	--headernav-filter: none;
 }
 
+body:has(input[value="dark"]:checked) {
+	--nav-background: black;
+	--color-text: white;
+	--color-kopjes: white;
+	--body-background: black;
+	--pijl-active: #84ff00;
+	--pijl-nietactive: white;
+	--footer-background: rgb(18, 18, 18);
+	--footer-text: white;
+	--headernav-filter: invert(1);
+}
 
-
+body:has(input[value="summer"]:checked) {
+	--nav-background: rgb(255, 89, 0);
+	--color-text: white;
+	--color-kopjes: white;
+	--body-background: rgb(255, 89, 0);
+	--pijl-active: rgb(255, 89, 0);
+	--pijl-nietactive: white;
+	--footer-background: rgb(53, 18, 0);
+	--footer-text: white;
+	--headernav-filter: invert(1);
+}
+	
 /****************/
 /* JOUW STYLING */
 /****************/
@@ -101,17 +130,18 @@
 /* de bolletjes container */
 .caroCarrousel nav ul {
   position: absolute;
-	left: 2em; right: 2em;
-	bottom: 0;
+	left: 1em; right: 2em;
+	bottom: 20px;
 	margin: 0;
   padding: 0 0 .5em;
   list-style: none;
 	
 	display: flex;
 /* 	flex-wrap:wrap; */
-  justify-content: center;
+  justify-content: flex-start;
   gap:.4em;
 }
+
 
 /* een bolletje container */
 .caroCarrousel > nav li {
@@ -126,7 +156,7 @@
   display: block;
   width:100%;
   height:100%;
-  color: white;
+  color: var(--pijl-nietactive);
   text-decoration: none;
 	font-size: 3em;
   transition: 0.5s;
@@ -140,17 +170,60 @@
 }
 
 .caroCarrousel > nav a.current {
-  color: #0003ff;
+  color: var(--pijl-active);
+}
+
+.caroCarrousel {
+	position: relative;
+}
+
+.caroCarrousel ul{
+	margin-top: -60px;
+}
+
+.caroCarrousel h2{
+	position: absolute;
+	top: 55%; /* Plaatsing bovenin de afbeelding */
+	left: 5px;
+	color: white; /* Aangepast aan de afbeelding */
+	font-size: 32px;
+	line-height: 40px;
+	letter-spacing: -0.64px;
+	text-align: left;
 }
 
 
+#theme-form {
+    display: flex;
+    gap: 10px; /* Ruimte tussen de knoppen */
+}
 
+.custom-radio input[type="radio"] {
+    display: none; /* Verberg de standaard radio buttons */
+}
 
+.custom-radio::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px; 
+    border-radius: 50%;
+    border: .5px solid #8D8D8D; 
+    cursor: pointer;
+}
 
+/* Kleuren voor de verschillende knoppen */
+.custom-radio:nth-child(1)::before {
+    background-color: white; /* Zwarte knop */
+}
 
+.custom-radio:nth-child(2)::before {
+    background-color: black; /* Witte knop */
+}
 
-
-
+.custom-radio:nth-child(3)::before {
+    background-color: orange; /* Oranje knop */
+}
 
 
 
@@ -160,30 +233,63 @@
 
 
 body {
-    background-color: var(--color-background);
+    background-color: var(--body-background);
 	padding: 0;
 	margin: 0;
 	font-family:sans-serif
+	
+}
+
+
+header nav{
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	
 }
 
 header nav ul{
-	background-color: rgba(255, 255, 255, 0);
+	background-color: var(--nav-background);
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	list-style-type: none;
     position: fixed;
-    top: 0;
-    background-color: #fff;
+    background-color: var(--nav-background);
     width: 100%;
 	padding: 1em;
+	margin: 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 	z-index: 1;
 }
+
+.hamburgermenu {
+	display: flex;
+	gap: 20px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+
+.extra-items {
+	display: flex;
+	align-items: center;
+	justify-items: end;
+  }
 
 header nav ul li:nth-of-type(2){
 	padding-left: 2em;
 }
 
+header nav ul li svg {
+	filter: var(--headernav-filter);
+}
 
+header nav ul li img {
+	filter: var(--headernav-filter);
+}
 
 main{
 	padding-top: 5em;
@@ -191,27 +297,25 @@ main{
 
 h1 { 
 	padding-left: 16px;
+	color: #cfcece;
+	font-size: 20px;
+	font-weight: lighter;
 }
 
 h2 { 
 	padding-left: 16px;
+	color: var(--color-kopjes);
 }
 
 h3{
-	font-family:sans-serif
+	font-family:sans-serif;
+	color: var(--color-text);
 }
 
 p{
 	font-family: Helvetica, sans-serif;
+	color: var(--color-text);
 }
-
-/*
-main ul p{
-	display: flex;
-}
-main ul p:nth-last-of-type(2){
-	justify-content: end;
-} */
 
 .tesktje {
 	display: flex;
@@ -225,7 +329,7 @@ main ul {
 }
 
 main ul li {
-    background-color: var(--color-background);
+    background-color: var(--body-background);
 }
 
 li img {
@@ -238,8 +342,8 @@ li img {
 /****************/
 
 footer {
-	background-color: #1b1b1b;;
-	color: #fff;
+	background-color: var(--footer-background);
+	color: var(--footer-text);
 	padding: 1em;
 
 }
@@ -264,15 +368,14 @@ footer section ul {
 
 footer section ul li{
 	padding: 2em;
-	background-color: black;
 	border: 1px solid #c4c5ba;
 	
 
 }
 
 footer img{
-	width: 341px;
-	height: 251px;
+	width: 343px;
+	height: 260px;
 	border: 1px solid #c4c5ba;
 	margin: 0;
 	
@@ -281,7 +384,7 @@ footer img{
 footer ul{
 list-style-type: none;
 border: 1px solid #c4c5ba;
-margin: 0;
+margin: -1px;
 padding: 2em;
 
 }
@@ -290,6 +393,11 @@ footer h3 {
 	border: 1px solid #c4c5ba;
 	padding: 2em;
 	margin: 0;
+	color: var(--footer-text);
+}
+
+footer p {
+	color: var(--footer-text);
 }
 
 .inputveld {

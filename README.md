@@ -46,7 +46,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
  Artikelpagina
-  <img src="readme-images/pagina2.png" width="375px" alt="truipagina">
+  <img src="readme-images/pagina2.png" width="375px" alt="artikelpagina">
  
 </details>
 
@@ -97,6 +97,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+  Goed: Ik heb geprobeerd de opdrachten van Sanne te maken en
 
 
   ### Agenda voor meeting
