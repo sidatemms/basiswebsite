@@ -25,6 +25,10 @@
   --artikelpagina-h2: #a6a5a5;
   --artikelpagina-h3: #1c1c1c;
   --artikelpagina-p: #000000;
+  --base-font-size: 16px;
+  --heading-font-size: 24px;
+  --button-font-size: 14px;
+  --font-knoppen: 24px;
 }
 
 body:has(input[value="dark"]:checked) {
@@ -59,6 +63,33 @@ body:has(input[value="summer"]:checked) {
   --artikelpagina-h2: #ffb774;
   --artikelpagina-h3: #d8d8d8;
   --artikelpagina-p: white;
+}
+
+body:has(input[value="small"]:checked) {
+  --nav-kopjes: 28px;
+  --h3-tekst: 14px;
+  --h2-tekst: 20px;
+  --datum-tekst: 10px;
+  --p-tekst: 12px;
+  --font-knoppen: 20px;
+}
+
+body:has(input[value="medium"]:checked) {
+  --nav-kopjes: 32px;
+  --h3-tekst: 18px;
+  --h2-tekst: 24px;
+  --datum-tekst: 14px;
+  --p-tekst: 16px;
+  --font-knoppen: 24px;
+}
+
+body:has(input[value="large"]:checked) {
+  --nav-kopjes: 36px;
+  --h3-tekst: 22px;
+  --h2-tekst: 28px;
+  --datum-tekst: 18px;
+  --p-tekst: 20px;
+  --font-knoppen: 28px;
 }
 
 /******************************/
@@ -202,6 +233,28 @@ body:has(input[value="summer"]:checked) {
   background-color: orange; /* Oranje knop */
 }
 
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+  }
+  
+
+/************************/
+/* KNOPPEN VOOR FONTSIZE */
+/************************/
+
+#font-size-form {
+  display: flex;
+  font-size: var(--font-knoppen);
+  color: var(--color-text);
+}
+
 /************************/
 /* ALGEMENE STYLING */
 /************************/
@@ -308,7 +361,7 @@ header nav div a {
 header nav div ul {
   list-style-type: none;
   position: absolute;
-  font-size: 32px;
+  font-size: var(--nav-kopjes);
   left: 0;
   top: 30%;
 }
@@ -335,19 +388,20 @@ main ul li {
   background-color: var(--body-background);
 }
 
-h1 {
+/* h1 {
   display: none;
-}
+} */
 
 h2 {
   padding-top: 1em;
   padding-left: 16px;
   color: var(--color-kopjes);
+  font-size: var(--h2-tekst);
 }
 
-h3 {
+h3 a {
   color: var(--color-text);
-  font-size: 18px;
+  font-size: var(--h3-tekst);
   line-height: 24px;
   letter-spacing: -0.36px;
   margin-bottom: 0.5em;
@@ -360,7 +414,7 @@ a {
 
 .tesktje p {
   color: var(--color-text);
-  font-size: 14px;
+  font-size: var(--datum-tekst);
   font-weight: lighter;
   padding: 0;
   margin: 0;
@@ -376,6 +430,21 @@ li img {
   display: block;
   width: 100%;
 }
+
+@keyframes imganimatie {
+	0% { scale:1; }
+	15% { scale:.95; }
+	20% { scale:1.05; }
+	30% { scale:1; }
+	100% { scale:1; }
+  }
+  
+  li img:hover {
+	animation-name:imganimatie;
+	animation-duration:5s;   
+	animation-iteration-count:infinite;
+	will-change:transform;
+  }
 
 /****************/
 /* FOOTER STYLING */
@@ -486,6 +555,7 @@ footer p {
   color: var(--color-text);
   font-weight: lighter;
   padding-bottom: 1em;
+  font-size: var(--p-tekst);
 }
 
 #main .gridvoorafbeeldingen p {

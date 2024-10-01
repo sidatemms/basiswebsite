@@ -17,7 +17,7 @@
   <body>
     <header>
       <nav>
-        <button>
+        <button aria-label="Open menu">
           <span></span>
           <span></span>
           <span></span>
@@ -26,19 +26,39 @@
           <ul>
             <li class="themes">
               <form id="theme-form">
-                <label class="custom-radio">
+                <label class="custom-radio" tabindex="0" role="radio" aria-checked="true" aria-labelledby="light-label">
                   <input type="radio" name="theme" value="light" checked />
+                  <span id="light-label" class="sr-only">Light Theme</span>
                 </label>
-                <label class="custom-radio">
+                <label class="custom-radio" tabindex="0" role="radio" aria-checked="false" aria-labelledby="dark-label">
                   <input type="radio" name="theme" value="dark" />
+                  <span id="dark-label" class="sr-only">Dark Theme</span>
                 </label>
-                <label class="custom-radio">
+                <label class="custom-radio" tabindex="0" role="radio" aria-checked="false" aria-labelledby="summer-label">
                   <input type="radio" name="theme" value="summer" />
+                  <span id="summer-label" class="sr-only">Summer Theme</span>
+                </label>
+              </form>
+                            
+            </li>
+            <li>
+              <form id="font-size-form">
+                <label>
+                  <input type="radio" name="font-size" value="small" /> Small
+                  Font
+                </label>
+                <label>
+                  <input type="radio" name="font-size" value="medium" checked />
+                  Medium Font
+                </label>
+                <label>
+                  <input type="radio" name="font-size" value="large" /> Large
+                  Font
                 </label>
               </form>
             </li>
             <li>
-              <a href="#">Discover</a>
+              <a href="index.html">Discover</a>
             </li>
             <li>
               <a href="#">Store</a>
@@ -94,27 +114,27 @@
     </header>
 
     <main id="main">
-      <h1>JOEY BADASS FOR OUTLANDER POWERED BY G-SHOCK</h1>
-      <p>3 min read • June 25, 2024</p>
-      <img
+      <h1 tabindex="0">JOEY BADASS FOR OUTLANDER POWERED BY G-SHOCK</h1>
+      <p tabindex="0">3 min read • June 25, 2024</p>
+      <img tabindex="0"
         src="//outlandermag.com/cdn/shop/articles/Joey_B4856.jpg?v=1721040150&amp;width=2500"
         alt="JOEY BADASS FOR OUTLANDER POWERED BY G-SHOCK"
       />
       <h2>JOEY BADASS FOR OUTLANDER POWERED BY G-SHOCK</h2>
       <section>
-        <p>
+        <p tabindex="0">
           When we were sat around our office thinking about who should grace our
           next cover (both digital and physical) it just had to be Joey Badass -
           and for multiple reasons.
         </p>
 
-        <img
+        <img tabindex="0"
           alt="Joey Badass"
           src="https://cdn.shopify.com/s/files/1/0664/0776/0062/files/Image_3-min.png?v=1719345861"
           style="float: none"
         />
         <h2>JOEY BADASS</h2>
-        <p>
+        <p tabindex="0">
           Time. This was our main reason. Many may not know this as we blew up
           around 4 years ago, but Outlander Magazine is 10 years old, but,
           unlike many of our counterparts who we’ve seen come and go, we've
@@ -128,7 +148,7 @@
           alt="JOEY BADASS FOR OUTLANDER POWERED BY G-SHOCK"
         />
         <h2>JOEY BADASS</h2>
-        <p>
+        <p tabindex="0">
           Early in the Summer, We took Joey to a house in Brooklyn that was
           already beautifully laid out with rooms ready to be photographed in.
           Donning several Full-set outfits that have recently become his
@@ -136,7 +156,7 @@
           Aaron (who are also Joeys Longtime personal stylists) get a feel for
           the energy in each room and choose the outfits accordingly.
         </p>
-        <p>
+        <p tabindex="0">
           In the below image we had Joey in a full Kenzo FW24 Look - KENZO being
           another long time partner of ours who has shown support and adoration
           toward Outlander from the very beginning, so it was only right. This
@@ -145,7 +165,7 @@
           what we stand for at Outlander, that's why this image is also our Hero
           image and cover.
         </p>
-        <img
+        <img tabindex="0"
           alt="Joey Badass"
           src="https://cdn.shopify.com/s/files/1/0664/0776/0062/files/Joey_Badass_G-Shock_-_Image_1.jpg?v=1719346237"
           style="float: none"
@@ -157,8 +177,8 @@
 
         <div class="article_tags">
           <ul>
-            <li>G-SHOCK</li>
-            <li>Joey Badass</li>
+            <li tabindex="0">G-SHOCK</li>
+            <li tabindex="0">Joey Badass</li>
           </ul>
         </div>
         <span class="lijn"></span>
@@ -222,28 +242,28 @@
       <section>
         <ul class="gridvoorafbeeldingen">
           <li>
-            <a>
+            <a href="#" tabindex="0">
               <img src="images/HP_FUTURE.jpg" />
               <h3>SOCIAL MEDIA</h3>
               <p>BEING ANONYMOUS IS...</p>
             </a>
           </li>
           <li>
-            <a>
+            <a href="#" tabindex="0">
               <img src="images/HP_NEMZZZ.jpg" />
               <h3>FASHION</h3>
               <p>NEMZZZ: POWERED B...</p>
             </a>
           </li>
           <li>
-            <a>
+            <a href="#" tabindex="0">
               <img src="images/HP_PHARRELL.jpg" />
               <h3>CULTURE</h3>
               <p>10,000 FOLLOWERS...</p>
             </a>
           </li>
           <li>
-            <a>
+            <a href="#" tabindex="0">
               <img src="images/HP_MAN.jpg" />
               <h3>CULTURE</h3>
               <p>IF YOU COULDN'T C...</p>

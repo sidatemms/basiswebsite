@@ -3,18 +3,14 @@
 /* HAMBURGERMENU NAAR KRUIS */
 /************************/
 
-// 1
 var deButton = document.querySelector("nav button");
 
-// 2
 deButton.onclick = toggleMenu;
 
-// 3
 function toggleMenu() {
   var deNav = document.querySelector("nav");
   deNav.classList.toggle("toonMenu");
 
-  // 4
   var isExpanded = deButton.getAttribute("aria-expanded") === "true";
   deButton.setAttribute("aria-expanded", !isExpanded);
 }
@@ -22,6 +18,10 @@ function toggleMenu() {
 /************************/
 /* KEYBOARD SHORTCUT */
 /************************/
+
+// De JavaScript-code luistert naar de keydown-gebeurtenis. Dit detecteert wanneer een toets op het toetsenbord wordt ingedrukt
+// Wanneer de Esc-toets wordt ingedrukt (event.key === 'Escape'), wordt de scrollIntoView-functie aangeroepen op het #bottom-element. Dit zorgt ervoor dat de pagina naar het einde scroll
+// Bron: ChatGPT
 
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {

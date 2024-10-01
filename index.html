@@ -18,28 +18,71 @@
   <body>
     <header>
       <nav>
-        <button>
+        <!-- Met hulp van David heb ik een hamburger menu gemaakt die transformeert naar een kruis met JS. -->
+        <button aria-label="Open menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
+
+        <!-- <div> zorgt ervoor dat ik hem in css kan aanroepen zodat hij 'verborgen' is. -->
         <div>
           <ul>
+            <!-- Met behulp van Niels heb ik de 'radio-buttons' erin gekregen, daarnaast heb ik aan ChatGPT gevraagd hoe ik ervoor zorgde dat beschrijvingen niet visueel zichtbaar zijn, maar wel worden voorgelezen door ze een class te geven. -->
             <li class="themes">
               <form id="theme-form">
-                <label class="custom-radio">
+                <label
+                  class="custom-radio"
+                  tabindex="0"
+                  role="radio"
+                  aria-checked="true"
+                  aria-labelledby="light-label"
+                >
                   <input type="radio" name="theme" value="light" checked />
+                  <span id="light-label" class="sr-only">Light Theme</span>
                 </label>
-                <label class="custom-radio">
+                <label
+                  class="custom-radio"
+                  tabindex="0"
+                  role="radio"
+                  aria-checked="false"
+                  aria-labelledby="dark-label"
+                >
                   <input type="radio" name="theme" value="dark" />
+                  <span id="dark-label" class="sr-only">Dark Theme</span>
                 </label>
-                <label class="custom-radio">
+                <label
+                  class="custom-radio"
+                  tabindex="0"
+                  role="radio"
+                  aria-checked="false"
+                  aria-labelledby="summer-label"
+                >
                   <input type="radio" name="theme" value="summer" />
+                  <span id="summer-label" class="sr-only">Summer Theme</span>
+                </label>
+              </form>
+            </li>
+
+            <!-- Met behulp van de opdrachten van Sanne heb ervoor kunnen zorgen dat de lettergrootte aangepast kan worden -->
+            <li>
+              <form id="font-size-form">
+                <label>
+                  <input type="radio" name="font-size" value="small" /> Small
+                  Font
+                </label>
+                <label>
+                  <input type="radio" name="font-size" value="medium" checked />
+                  Medium Font
+                </label>
+                <label>
+                  <input type="radio" name="font-size" value="large" /> Large
+                  Font
                 </label>
               </form>
             </li>
             <li>
-              <a href="#">Discover</a>
+              <a href="index.html">Discover</a>
             </li>
             <li>
               <a href="#">Store</a>
@@ -100,36 +143,57 @@
       <section
         id="justBolletjes"
         class="caroCarrousel"
-        aria-label="Voorbeeld met alleen bolletjes"
-        tabIndex="-1"
+        tabindex="0"
+        aria-label="Carrousel met de nieuwste artikelen van Outlander Magazine"
+        aria-live="polite"
       >
         <!-- de id kun je zelf een naam geven en geef je mee in de js -->
         <ul>
-          <li id="element1">
+          <li
+            id="element1"
+            aria-label="Artikel Rapper Joey Badass: 'Joey Badass for Outlander powered by G-SCHOCK.' "
+            tabindex="0"
+          >
             <img
               src="images/new1.png"
               alt="Afbeelding van rapper Joey Badass, liggend op een kleed met een tijgerprint."
             />
           </li>
-          <li id="element2">
+          <li
+            id="element2"
+            aria-label="Artikel Rapper Nemzzz: 'Nemzzz: Powered by dynamic air.' "
+            tabindex="0"
+          >
             <img
               src="images/new2.png"
               alt="Afbeelding met de recent uitgebracht Nike sneakers, gedragen door rapper Nemzzz en zijn vrienden."
             />
           </li>
-          <li id="element3">
+          <li
+            id="element3"
+            aria-label="Artikel over meningen: '10000 followers or 10 years experience? Who's opinion is more valid?'' "
+            tabindex="0"
+          >
             <img
               src="images/new3.png"
               alt="Afbeelding van een lachende Pharrell Williams."
             />
           </li>
-          <li id="element4">
+          <li
+            id="element4"
+            aria-label="Artikel over bekritiseringen: 'If you couldn't create it should you critique it?' "
+            tabindex="0"
+          >
             <img
               src="images/new4.png"
               alt="Afbeelding van een medewerker van Bottega Veneta die werkzaamheden aan het verrichten is in een studio."
             />
           </li>
-          <li id="element5">
+          <li
+            id="element5"
+            aria-label="Artikel over anonimiteit: 'Being anonymous is the future.' "
+            tabindex="0"
+          >
             <img
               src="images/new5.png"
               alt="Groepsportret met mensen in een witte labjas, met één lege stoel in het midden."
@@ -139,17 +203,19 @@
 
         <nav>
           <ul>
-            <li><a href="#element1" aria-label="go to first slide">→</a></li>
-            <li><a href="#element2" aria-label="go to second slide">→</a></li>
-            <li><a href="#element3" aria-label="go to third slide">→</a></li>
-            <li><a href="#element4" aria-label="go to fourth slide">→</a></li>
-            <li><a href="#element5" aria-label="go to fifth slide">→</a></li>
+            <li><a href="#element1" aria-label="ga naar eerste slide">→</a></li>
+            <li><a href="#element2" aria-label="ga naar tweede slide">→</a></li>
+            <li><a href="#element3" aria-label="ga naar derde slide">→</a></li>
+            <li><a href="#element4" aria-label="ga naar vierde slide">→</a></li>
+            <li><a href="#element5" aria-label="ga naar vijfde slide">→</a></li>
           </ul>
         </nav>
       </section>
 
-      <h1>Homepage</h1>
-      <h2>TALK OF THE LAND</h2>
+      <!-- Nieuwe h1 gegeven voor betere toegangelijkheid, daarnaast een class gegeven zodat hij visueel niet zichtbaar is. -->
+
+      <h1 class="sr-only" tabindex="0">Homepage</h1>
+      <h2 tabindex="0">TALK OF THE LAND</h2>
       <ul>
         <li>
           <a href="artikelpagina.html">
@@ -157,9 +223,14 @@
               src="images/Frame 1.jpg"
               alt="Afbeelding van rapper Joey Badass, liggend op een kleed met een tijgerprint."
             />
-            <h3>JOEY BADASS FOR OUTLANDER POWERED BY G-SHOCK</h3>
           </a>
-          <div class="tesktje">
+          <h3>
+            <a href="artikelpagina.html"
+              >BADASS FOR OUTLANDER POWERED BY G-SHOCK</a
+            >
+          </h3>
+
+          <div class="tesktje" tabindex="0">
             <p>June 25, 2024</p>
             <p>3 min read</p>
           </div>
@@ -170,9 +241,12 @@
               src="images/Frame 3.jpg"
               alt="Afbeelding met de recent uitgebracht Nike sneakers, gedragen door rapper Nemzzz en zijn vrienden."
             />
-            <h3>NEMZZZ: POWERED BY DYNAMIC AIR</h3>
           </a>
-          <div class="tesktje">
+          <h3>
+            <a href="artikelpagina.html">NEMZZZ: POWERED BY DYNAMIC AIR</a>
+          </h3>
+
+          <div class="tesktje" tabindex="0">
             <p>June 19, 2024</p>
             <p>4 min read</p>
           </div>
@@ -183,12 +257,15 @@
               src="images/Frame 4.jpg"
               alt="Afbeelding van een lachende Pharrell Williams."
             />
-            <h3>
-              10,000 FOLLOWERS OR 10 YEARS EXPERIENCE? - WHO'S OPINION IS MORE
-              VALID?
-            </h3>
           </a>
-          <div class="tesktje">
+          <h3>
+            <a href="artikelpagina.html"
+              >10,000 FOLLOWERS OR 10 YEARS EXPERIENCE? - WHO'S OPINION IS MORE
+              VALID?</a
+            >
+          </h3>
+
+          <div class="tesktje" tabindex="0">
             <p>June 19, 2024</p>
             <p>3 min read</p>
           </div>
@@ -199,9 +276,14 @@
               src="images/Frame 5.jpg"
               alt="Afbeelding van een medewerker van Bottega Veneta die werkzaamheden aan het verrichten is in een studio."
             />
-            <h3>IF YOU COULDN'T CREATE IT SHOULD YOU CRITIQUE IT</h3>
           </a>
-          <div class="tesktje">
+          <h3>
+            <a href="artikelpagina.html"
+              >IF YOU COULDN'T CREATE IT SHOULD YOU CRITIQUE IT</a
+            >
+          </h3>
+
+          <div class="tesktje" tabindex="0">
             <p>June 19, 2024</p>
             <p>3 min read</p>
           </div>
@@ -212,9 +294,12 @@
               src="images/Frame 6.jpg"
               alt="Groepsportret met mensen in een witte labjas, met één lege stoel in het midden."
             />
-            <h3>BEING ANONYMOUS IS THE FUTURE</h3>
           </a>
-          <div class="tesktje">
+          <h3>
+            <a href="artikelpagina.html">BEING ANONYMOUS IS THE FUTURE</a>
+          </h3>
+
+          <div class="tesktje" tabindex="0">
             <p>June 19, 2024</p>
             <p>3 min read</p>
           </div>
@@ -240,7 +325,7 @@
         </ul>
       </section>
 
-      <img src="images/HP_JOEY.jpg" alt="" />
+      <img src="images/HP_JOEY.jpg" alt="Afbeelding van rapper Joey Badass" />
 
       <ul>
         <li>
@@ -250,10 +335,10 @@
           <a href="#">Privacy</a>
         </li>
         <li>
-          <a href="#">Twitter / X</a>
+          <a href="#" aria-label="Outlander Twitter">Twitter / X</a>
         </li>
         <li>
-          <a href="#">Instagram</a>
+          <a href="#" aria-label="Outlander Instagram">Instagram</a>
         </li>
       </ul>
       <h3>JOIN THE OUTLANDERS*</h3>

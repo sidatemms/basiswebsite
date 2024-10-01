@@ -96,7 +96,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Voor mijn gevoel kom ik echt niet ver en ik heb best wel moeite met de opdrachten van Sanne
 
   Goed: Ik heb geprobeerd de opdrachten van Sanne te maken en
 
@@ -114,10 +114,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Carrousel-opdracht van Sanne vragen aan studentassistenten
+  - Meer vragen om hulp
+  - Github updaten
+  - Hulp gekregen met GitHub extensie downloaden
 
 </details>
 
@@ -178,7 +178,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Gaat de goede kant op, ik moet wel nog hulp krijgen bij mijn navigation & hamburgermenu, daarnaast moet ik nog de toegankelijkheidstest uitvoerem.
 
 
   ### Agenda voor meeting
@@ -211,19 +211,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="images/afbgoed.png" width="375px" alt="pagina 1">
+  <img src="images/afbgoed2.png" width="375px" alt="pagina 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Aan het begin van dit vak had ik eerlijk gezegd geen idee wat ik aan het doen was. De opdrachten van Sanne hielpen me om dingen te begrijpen maar ik vond het nog steedds heel lastig om dit toe te passen op mijn eigen website. Ik heb deze afgelopen periode denk ik echt ingezien hoe belangrijk het is om dingen te vragen. Niet alleen helpt dit mij om verder te komen, maar ik kreeg steeds meer het gevoel dat ik dingen echt begreep en ben ook buiten de opdrachten van Sanne om dingen gaan onderzoeken en experimenteren.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Ik dacht dat ik het nooit zou zeggen, maar na dit resultaat (ook al weet ik nog niet of het voldoende is) ben ik toch heel trots op mezelf. Ik zat naar mijn gevoel zelfs nog een niveau onder de blauwe piste, maar heb na dit vak denk ik echt vooruitgang geboekt. Ook op het gebied van toegankelijkheid heb ik veel geleerd. Onder andere het symposium heeft mij in laten zien hoe belangrijk het is om hier op te letten. Ik hoop dat ik hier voldoende van heb laten zien in mijn code!
+
+  <img src="images/afbgoed.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  De navigatie in de originele site is eerst doorzichtig, en als je naar beneden scrollt wit. Ik weet kwam hier écht niet uit dus ik heb mij eerst gefocust op de andere onderdelen van mijn website.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="images/Scherm­afbeelding 2024-10-01 om 15.20.09.png" width="375px" alt="bummer">
 </details>
 
 
