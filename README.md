@@ -61,10 +61,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen:
 
   - Heel veel/snel informatie achter elkaar
+  - Geen omschrijvende h1
+  - Geen duidelijk alt-teksten
+  - Sommige links worden geskipt
   - De screenreader begon bij de navigatie
   - Afbeeldingen hadden een niet heel gedetailleerde/ duidelijk alt
   - De volgorde is grotendeel wel logisch
   - De VoiceOver spreekt vaak zonder interpunctie
+  - Onzichtbare links worden voorgelezen
 
 </details>
 
@@ -98,7 +102,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   Voor mijn gevoel kom ik echt niet ver en ik heb best wel moeite met de opdrachten van Sanne
 
-  Goed: Ik heb geprobeerd de opdrachten van Sanne te maken en
+  Goed: Ik heb geprobeerd de opdrachten van Sanne te maken
 
 
   ### Agenda voor meeting
@@ -131,7 +135,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik loop een beetje vast en weet niet echt hoe ik verder moet. De breakdownschets die ik heb gemaakt heeft mij wel meer overzicht gegeven maar naast mijn <main> heb ik erg moeite.
 
 
   ### Agenda voor meeting
@@ -147,10 +151,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Eigenlijk best wel positieve feedback gekregen van Ivo
+  - Readme bijwerken
+  - Site hoeft niet identiek te zijn. Het gaan meer om correcte code
+  - Duidelijkheid gekregen over wat in een section kan
+  - Kijk naar alternatieven als Grid niet lukt
+  - Geholpen met de main een beetje naar beneden krijgen
+  - Gebruik comments om bronnen te vermelden
 
 </details>
 
@@ -164,7 +171,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+
+- Ik zag dat nog niet al mijn images een (duidelijke) alt-tag hadden, deze heb ik aangepast.
+- Veel van mijn elementen waren nog niet selecteerbaar met de tab-toets, ik heb aangepast door deze elementen en tabindex= "0"; te geven.
+- Ik ga de pijltjes een aria-label gegeven.
+- buttons ga ik ook een aria-label gegeven.
+- Ik ga het mogelijk maken om de lettergrootte aan te passen.
+- Ik ga een keyboard shortcut toevoegen om naar het einde van de pagina te gaan.
+- Ik ga de exposure van de images in de carrousel lager maken zodat de witte tekst en de pijltjes beter leesbaar zijn.
+- Ik geef een filter aan de images en svg's zodat de zichtbaar blijven als het theme wordt aangepast.
+
+
 
 </details>
 
@@ -194,9 +211,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Hulp gekregen van David bij navigatie & hamburgermenu
+  - Aan de slag met 2e pagina
+  - Letten op toegankelijkheid
   - ...
 
 </details>
@@ -226,7 +243,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit was lastig/Is niet gelukt:
   De navigatie in de originele site is eerst doorzichtig, en als je naar beneden scrollt wit. Ik weet kwam hier écht niet uit dus ik heb mij eerst gefocust op de andere onderdelen van mijn website.
 
-  <img src="images/Scherm­afbeelding 2024-10-01 om 15.20.09.png" width="375px" alt="bummer">
+  <img src="images/Scherm­afbeelding 2024-10-01 om 15.20.09.png" width="375px" alt="navigatie">
 </details>
 
 
@@ -242,8 +259,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://cssgrid-generator.netlify.app/ - Voor grid in de footer
+  2.https://outlandermag.com/ - Referentiesite & voor afbeeldingen en svg's
+  3. https://chatgpt.com/share/66fc080c-78ac-8005-b6c3-e413d8d3fd6d - Om mijn css op te schonen, vragen waarom js niet werkte en keyboard shortcut
+  4. https://chatgpt.com/share/66fc0996-e648-8005-9356-0395fa455ebb - Dit gesprek heb ik gebruikt om mij op weg te helpen met bepaalde dingen zoals de header, hoe ik filters om images zet, hulp met flexbox en hoe ik tekst krijg op mijn caroussel. Daarbij moet ik wel zeggen dat ik vrijwel niets van deze dingen uiteindelijk heb gebruikt omdat ik het veel beter begreep als ik het bijvoorbeeld vroeg aan een studentassistent.
 
 </details>

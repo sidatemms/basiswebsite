@@ -143,10 +143,10 @@ body:has(input[value="large"]:checked) {
 }
 
 /****************/
-/* DE BOLLETJES */
+/* DE PIJLTJES */
 /****************/
 
-/* de bolletjes container */
+/* de pijltjes container */
 .caroCarrousel nav ul {
   position: absolute;
   left: 1em;
@@ -162,7 +162,7 @@ body:has(input[value="large"]:checked) {
   gap: 0.4em;
 }
 
-/* een bolletje container */
+/* een pijltjes container */
 .caroCarrousel > nav li {
   flex-basis: 1.2em;
   aspect-ratio: 1/1;
@@ -345,7 +345,7 @@ header nav div {
   right: 0;
   top: 0;
   bottom: 0;
-  translate: 0% -100%; /* VERBERGT MENU */
+  transform: translate(0%, -100%); /* VERBERGT MENU */
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -367,7 +367,7 @@ header nav div ul {
 }
 
 nav.toonMenu div {
-  translate: 0% 0%;
+  transform: translate(0%, 0%); /* VERBERGT MENU */
   overflow-y: auto;
 }
 
@@ -387,10 +387,6 @@ main ul {
 main ul li {
   background-color: var(--body-background);
 }
-
-/* h1 {
-  display: none;
-} */
 
 h2 {
   padding-top: 1em;
@@ -431,6 +427,8 @@ li img {
   width: 100%;
 }
 
+/* Uit de oefeningen van Sanne */
+
 @keyframes imganimatie {
 	0% { scale:1; }
 	15% { scale:.95; }
@@ -457,6 +455,7 @@ footer {
 }
 
 footer section ul {
+  /* BRON: CSS Grid Generator */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
