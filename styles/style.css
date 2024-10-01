@@ -1,100 +1,91 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--nav-background: white;
-	--color-text: black;
-	--color-kopjes: black;
-	--body-background: white;
-	--pijl-active: #0003ff;
-	--pijl-nietactive: white;
-	--footer-background: rgb(36, 36, 36);
-	--footer-text: white;
-	--headernav-filter: none;
+  --nav-background: white;
+  --color-text: black;
+  --color-kopjes: black;
+  --body-background: white;
+  --pijl-active: #0003ff;
+  --pijl-nietactive: white;
+  --footer-background: rgb(36, 36, 36);
+  --footer-text: white;
+  --headernav-filter: none;
+  --div-text: #0003ff;
+  --article-tags: #e6e6e6;
+  --artikelpagina-h2: #a6a5a5;
+  --artikelpagina-h3: #1c1c1c;
+  --artikelpagina-p: #000000;
 }
 
 body:has(input[value="dark"]:checked) {
-	--nav-background: black;
-	--color-text: white;
-	--color-kopjes: white;
-	--body-background: black;
-	--pijl-active: #84ff00;
-	--pijl-nietactive: white;
-	--footer-background: rgb(18, 18, 18);
-	--footer-text: white;
-	--headernav-filter: invert(1);
+  --nav-background: black;
+  --color-text: white;
+  --color-kopjes: white;
+  --body-background: black;
+  --pijl-active: #84ff00;
+  --pijl-nietactive: white;
+  --footer-background: rgb(18, 18, 18);
+  --footer-text: white;
+  --headernav-filter: invert(1);
+  --div-text: #84ff00;
+  --article-tags: #2e2e2e;
+  --artikelpagina-h2: #a6a5a5;
+  --artikelpagina-h3: #d8d8d8;
+  --artikelpagina-p: white;
 }
 
 body:has(input[value="summer"]:checked) {
-	--nav-background: rgb(255, 89, 0);
-	--color-text: white;
-	--color-kopjes: white;
-	--body-background: rgb(255, 89, 0);
-	--pijl-active: rgb(255, 89, 0);
-	--pijl-nietactive: white;
-	--footer-background: rgb(53, 18, 0);
-	--footer-text: white;
-	--headernav-filter: invert(1);
+  --nav-background: rgb(255, 89, 0);
+  --color-text: white;
+  --color-kopjes: white;
+  --body-background: rgb(255, 89, 0);
+  --pijl-active: rgb(255, 89, 0);
+  --pijl-nietactive: white;
+  --footer-background: rgb(53, 18, 0);
+  --footer-text: white;
+  --headernav-filter: invert(1);
+  --div-text: #fff200;
+  --article-tags: rgb(254, 125, 56);
+  --artikelpagina-h2: #ffb774;
+  --artikelpagina-h3: #d8d8d8;
+  --artikelpagina-p: white;
 }
-	
-/****************/
-/* JOUW STYLING */
-/****************/
 
 /******************************/
 /* DE CAROCARROUSEL CONTAINER */
 /******************************/
 
-.caroCarrousel {
-	/* basis waarden die door de hele carrousel gebruikt worden */
-	/* kun je zelf aanpassen */
-	--caroCarrouselMainColor:#333;
-  --caroCarrouselAccentColor:#0003ff;
-	--caroCarrouselShadeColor:#ddd9;
-
-  position: relative;
-	outline:none;
-}
-
-/* dark mode */
-@media (prefers-color-scheme: dark) {
-  .caroCarrousel {
-    --caroCarrouselMainColor:#ccc;
-    --caroCarrouselShadeColor:#4449;
-  }
-}
-
-
 /************************************/
 /* de carrousel elementen container */
 .caroCarrousel > ul {
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
   list-style: none;
-	display: flex;
-	
-	/* handmatig scrollen is mogelijk */
-	overflow: hidden;
-	
-	/* snappen als er gescrolled wordt - andere helft bij li */
+  display: flex;
+
+  /* handmatig scrollen is mogelijk */
+  overflow: hidden;
+
+  /* snappen als er gescrolled wordt - andere helft bij li */
   scroll-snap-type: inline mandatory;
-  
+
   /* smooth scrollen */
-	scroll-behavior: smooth;
-  
+  scroll-behavior: smooth;
+
   /* scrollbar zoveel mogelijk verbergen */
   -webkit-overflow-scrolling: touch; /* voor iOS*/
   -ms-overflow-style: none; /* voor IE */
-	scrollbar-width: none; /* voor firefox */
+  scrollbar-width: none; /* voor firefox */
 }
 
 .caroCarrousel > ul::-webkit-scrollbar {
@@ -102,16 +93,14 @@ body:has(input[value="summer"]:checked) {
   display: none; /* voor chrome, safari en edge*/
 }
 
-
 /**************************/
 /* de carrousel elementen */
 .caroCarrousel > ul li {
   flex-basis: 100%;
   flex-shrink: 0;
   /* snappen als er gescrolled wordt - andere helft bij ul */
-	scroll-snap-align:center;
+  scroll-snap-align: center;
 }
-
 
 /**********************************/
 /* de carrousel elementen content */
@@ -122,7 +111,6 @@ body:has(input[value="summer"]:checked) {
   width: 100%;
 }
 
-
 /****************/
 /* DE BOLLETJES */
 /****************/
@@ -130,38 +118,37 @@ body:has(input[value="summer"]:checked) {
 /* de bolletjes container */
 .caroCarrousel nav ul {
   position: absolute;
-	left: 1em; right: 2em;
-	bottom: 20px;
-	margin: 0;
-  padding: 0 0 .5em;
+  left: 1em;
+  right: 2em;
+  bottom: 20px;
+  margin: 0;
+  padding: 0 0 0.5em;
   list-style: none;
-	
-	display: flex;
-/* 	flex-wrap:wrap; */
-  justify-content: flex-start;
-  gap:.4em;
-}
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.4em;
+}
 
 /* een bolletje container */
 .caroCarrousel > nav li {
-	flex-basis: 1.2em;
-	aspect-ratio: 1/1;
-	background-color: transparent; /* Verwijdert de achtergrondkleur */
-	border: none; /* Zorgt ervoor dat er geen randen zijn */
+  flex-basis: 1.2em;
+  aspect-ratio: 1/1;
+  background-color: transparent; /* Verwijdert de achtergrondkleur */
+  border: none; /* Zorgt ervoor dat er geen randen zijn */
 }
 
 /* de bolletjes */
 .caroCarrousel > nav a {
   display: block;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   color: var(--pijl-nietactive);
   text-decoration: none;
-	font-size: 3em;
+  font-size: 3em;
   transition: 0.5s;
   margin-bottom: 0.3em;
-  
 }
 
 .caroCarrousel > nav a:hover,
@@ -174,167 +161,220 @@ body:has(input[value="summer"]:checked) {
 }
 
 .caroCarrousel {
-	position: relative;
+  position: relative;
 }
 
-.caroCarrousel ul{
-	margin-top: -60px;
+.caroCarrousel ul {
+  margin-top: -60px;
 }
 
-.caroCarrousel h2{
-	position: absolute;
-	top: 55%; /* Plaatsing bovenin de afbeelding */
-	left: 5px;
-	color: white; /* Aangepast aan de afbeelding */
-	font-size: 32px;
-	line-height: 40px;
-	letter-spacing: -0.64px;
-	text-align: left;
-}
-
+/************************/
+/* KNOPPEN VOOR THEMES */
+/************************/
 
 #theme-form {
-    display: flex;
-    gap: 10px; /* Ruimte tussen de knoppen */
+  display: flex;
+  gap: 10px;
 }
 
 .custom-radio input[type="radio"] {
-    display: none; /* Verberg de standaard radio buttons */
+  display: none;
 }
 
 .custom-radio::before {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px; 
-    border-radius: 50%;
-    border: .5px solid #8D8D8D; 
-    cursor: pointer;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 0.5px solid #8d8d8d;
 }
 
 /* Kleuren voor de verschillende knoppen */
 .custom-radio:nth-child(1)::before {
-    background-color: white; /* Zwarte knop */
+  background-color: white; /* Witte knop */
 }
 
 .custom-radio:nth-child(2)::before {
-    background-color: black; /* Witte knop */
+  background-color: black; /* Zwarte knop */
 }
 
 .custom-radio:nth-child(3)::before {
-    background-color: orange; /* Oranje knop */
+  background-color: orange; /* Oranje knop */
 }
 
-
-
-
-
-
-
+/************************/
+/* ALGEMENE STYLING */
+/************************/
 
 body {
-    background-color: var(--body-background);
-	padding: 0;
-	margin: 0;
-	font-family:sans-serif
-	
+  background-color: var(--body-background);
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
 }
 
+/************************/
+/* HEADER STYLING */
+/************************/
 
-header nav{
-	padding: 0;
-	margin: 0;
-	position: fixed;
-	top: 0;
-	z-index: 1;
-	
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: var(--nav-background);
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-header nav ul{
-	background-color: var(--nav-background);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	list-style-type: none;
-    position: fixed;
-    background-color: var(--nav-background);
-    width: 100%;
-	padding: 1em;
-	margin: 0;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-	z-index: 1;
+header > a img {
+  width: 32px;
+  height: 32px;
+  filter: var(--headernav-filter);
 }
 
-.hamburgermenu {
-	display: flex;
-	gap: 20px;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-  }
-
-.extra-items {
-	display: flex;
-	align-items: center;
-	justify-items: end;
-  }
-
-header nav ul li:nth-of-type(2){
-	padding-left: 2em;
+header svg {
+  filter: var(--headernav-filter);
 }
 
-header nav ul li svg {
-	filter: var(--headernav-filter);
+/* HAMBURGER MENU */
+
+header nav button {
+  position: relative;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  border: none;
+  background: none;
 }
 
-header nav ul li img {
-	filter: var(--headernav-filter);
+header nav button span {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  width: 25px;
+  height: 1px;
+  background-color: black;
+  transition-duration: 0.2s;
+  filter: var(--headernav-filter);
 }
 
-main{
-	padding-top: 5em;
+header nav button span:nth-of-type(1) {
+  transform: translateY(-7px);
 }
 
-h1 { 
-	padding-left: 16px;
-	color: #cfcece;
-	font-size: 20px;
-	font-weight: lighter;
+header nav button span:nth-of-type(3) {
+  transform: translateY(7px);
 }
 
-h2 { 
-	padding-left: 16px;
-	color: var(--color-kopjes);
+header nav button[aria-expanded="true"] span:nth-of-type(1) {
+  transform: rotate(45deg) scaleX(1.25);
 }
 
-h3{
-	font-family:sans-serif;
-	color: var(--color-text);
+header nav button[aria-expanded="true"] span:nth-of-type(2) {
+  opacity: 0;
 }
 
-p{
-	font-family: Helvetica, sans-serif;
-	color: var(--color-text);
+header nav button[aria-expanded="true"] span:nth-of-type(3) {
+  transform: rotate(-45deg) scaleX(1.25);
 }
 
-.tesktje {
-	display: flex;
-	justify-content: space-between;
+/* HAMBURGER MENU UITGEKLAPT */
+
+header nav div {
+  z-index: 10;
+  background: var(--nav-background);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  translate: 0% -100%; /* VERBERGT MENU */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 400ms ease-in-out;
 }
 
+header nav div a {
+  text-decoration: none;
+  color: var(--div-text);
+}
+
+header nav div ul {
+  list-style-type: none;
+  position: absolute;
+  font-size: 32px;
+  left: 0;
+  top: 30%;
+}
+
+nav.toonMenu div {
+  translate: 0% 0%;
+  overflow-y: auto;
+}
+
+/************************/
+/* MAIN STYLING */
+/************************/
+
+main {
+  padding-top: 5em;
+}
 
 main ul {
-    list-style-type: none;
-	padding: 32px 16px;
+  list-style-type: none;
+  padding: 25px 16px;
 }
 
 main ul li {
-    background-color: var(--body-background);
+  background-color: var(--body-background);
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  padding-top: 1em;
+  padding-left: 16px;
+  color: var(--color-kopjes);
+}
+
+h3 {
+  color: var(--color-text);
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.tesktje p {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 0;
+  margin: 0;
+}
+
+.tesktje {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2.5em;
 }
 
 li img {
-	display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 /****************/
@@ -342,69 +382,148 @@ li img {
 /****************/
 
 footer {
-	background-color: var(--footer-background);
-	color: var(--footer-text);
-	padding: 1em;
-
-}
-
-a {
-	text-decoration: none;
-	color: #fff;
-
+  background-color: var(--footer-background);
+  color: var(--footer-text);
+  padding: 1em;
 }
 
 footer section ul {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		grid-column-gap: 0px;
-		grid-row-gap: 0px;
-		list-style-type: none;
-		padding: 0;
-
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  list-style-type: none;
+  padding: 0;
 }
 
-footer section ul li{
-	padding: 2em;
-	border: 1px solid #c4c5ba;
-	
-
+footer section ul li {
+  padding: 2em;
+  border: 1px solid #c4c5ba;
 }
 
-footer img{
-	width: 343px;
-	height: 260px;
-	border: 1px solid #c4c5ba;
-	margin: 0;
-	
+footer img {
+  width: 343px;
+  height: 290px;
+  border: 1px solid #c4c5ba;
 }
 
-footer ul{
-list-style-type: none;
-border: 1px solid #c4c5ba;
-margin: -1px;
-padding: 2em;
-
+footer ul {
+  list-style-type: none;
+  border: 1px solid #c4c5ba;
+  margin: -1px;
+  padding: 2em;
 }
 
 footer h3 {
-	border: 1px solid #c4c5ba;
-	padding: 2em;
-	margin: 0;
-	color: var(--footer-text);
+  border: 1px solid #c4c5ba;
+  padding: 32px;
+  margin: 0;
+  color: var(--footer-text);
 }
 
 footer p {
-	color: var(--footer-text);
+  color: var(--footer-text);
 }
 
 .inputveld {
-	display: flex;
-	border: 1px solid #c4c5ba;
-
+  display: flex;
+  border: 1px solid #c4c5ba;
 }
 
+/************************/
+/* 2de PAGINA MAIN STYLING */
+/************************/
 
+#main {
+  padding-right: 1em;
+  padding-left: 1em;
+}
 
+#main img {
+  width: 100%;
+}
+
+#main svg {
+  filter: var(--headernav-filter);
+}
+
+#main ul {
+  display: flex;
+  gap: 1em;
+  padding-left: 0;
+}
+
+#main h1 {
+  color: var(--color-kopjes);
+  font-size: 32px;
+  font-weight: bold;
+  padding-left: 0;
+  margin: 10px 0px;
+}
+
+#main h2 {
+  color: var(--artikelpagina-h2);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 10px;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+#main h3 {
+  color: var(--artikelpagina-h3);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: lighter;
+  line-height: normal;
+}
+
+#main p {
+  color: var(--color-text);
+  font-weight: lighter;
+  padding-bottom: 1em;
+}
+
+#main .gridvoorafbeeldingen p {
+  color: var(--artikelpagina-h3);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.4px;
+}
+
+.lijn {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid;
+  color: var(--article-tags);
+}
+
+#main .gridvoorafbeeldingen {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  padding: 0;
+  padding-bottom: 5em;
+}
+
+.article_tags ul {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.article_tags li {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 8px 16px;
+  background: var(--article-tags);
+  border-radius: 24px;
+}
