@@ -29,6 +29,7 @@
   --heading-font-size: 24px;
   --button-font-size: 14px;
   --font-knoppen: 24px;
+  --artikelh1-size: 32px;
 }
 
 body:has(input[value="dark"]:checked) {
@@ -72,6 +73,7 @@ body:has(input[value="small"]:checked) {
   --datum-tekst: 10px;
   --p-tekst: 12px;
   --font-knoppen: 20px;
+  --artikelh1-size: 28px;
 }
 
 body:has(input[value="medium"]:checked) {
@@ -81,6 +83,7 @@ body:has(input[value="medium"]:checked) {
   --datum-tekst: 14px;
   --p-tekst: 16px;
   --font-knoppen: 24px;
+  --artikelh1-size: 32px;
 }
 
 body:has(input[value="large"]:checked) {
@@ -90,6 +93,7 @@ body:has(input[value="large"]:checked) {
   --datum-tekst: 18px;
   --p-tekst: 20px;
   --font-knoppen: 28px;
+  --artikelh1-size: 36px;
 }
 
 /******************************/
@@ -524,7 +528,7 @@ footer p {
 
 #main h1 {
   color: var(--color-kopjes);
-  font-size: 32px;
+  font-size: var(--artikelh1-size);
   font-weight: bold;
   padding-left: 0;
   margin: 10px 0px;
